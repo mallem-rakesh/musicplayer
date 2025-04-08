@@ -1,0 +1,263 @@
+* {
+    font-family: "Roboto", sans-serif;
+    color: #8b8d8f;
+  }
+  
+  body {
+    background-image: radial-gradient(circle, #000000, #a9b2b8, #283435, #13241d, #383838);
+    background-size: 400% 400%;
+    animation: gradient-animation 37s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 50% 0%; }
+    75% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .tborder {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  .border-dec {
+    border: 6px solid rgb(71, 168, 139);
+    width: 340px;
+    border-radius: 30px;
+    padding: 3px;
+    animation: border-animation 5s linear infinite;
+  }
+  
+  @keyframes border-animation {
+    0% { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    25% { border-color: rgba(255, 0, 0, 0.5); box-shadow: 0 0 30px rgba(255, 0, 0, 0.5); }
+    50% { border-color: rgba(0, 255, 0, 0.5); box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); }
+    75% { border-color: rgba(0, 0, 255, 0.5); box-shadow: 0 0 30px rgba(0, 0, 255, 0.5); }
+    100% { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+  }
+  
+  .player {
+    height: 600px;
+    width: 320px;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, #33383e 0%, #17191d 100%);
+    margin: 0 auto;
+    display: block;
+    border: solid 2px #3e434c;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  
+  .indicator {
+    font-size: 10px;
+  }
+  
+  .small, .big, .big_play_pause {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: radial-gradient(at bottom right, #292e35 0%, #292e34 80%);
+    border: none;
+    box-shadow: -7px -6px 10px 5px rgba(255, 255, 255, 0.04), 6px 6px 10px 5px rgb(39, 42, 47);
+    padding: 0;
+  }
+  
+  .big, .big_play_pause {
+    height: 60px;
+    width: 60px;
+    box-shadow: -7px -6px 10px 5px rgba(255, 255, 255, 0.04), 7px 6px 10px 2px rgb(14, 15, 16);
+    background: radial-gradient(at bottom right, #17191e 0%, #1d2025 80%);
+  }
+  
+  .big_play_pause {
+    background: radial-gradient(at top left, #c92711 0%, #ea570a 80%);
+  }
+  
+  .inner_button, .center, .inner_button_big, .playpause {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background: radial-gradient(at top left, rgba(46, 50, 58, 1) 0%, rgba(28, 30, 35, 1) 80%);
+    margin: 0 auto;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner_button_big {
+    height: 55px;
+    width: 55px;
+    background: radial-gradient(at top left, rgb(57, 59, 64) 0%, rgb(12, 13, 16) 112%);
+  }
+  
+  .playpause {
+    background: radial-gradient(at bottom right, #c92711 0%, #ea570a 80%);
+    height: 55px;
+    width: 55px;
+  }
+  
+  .center {
+    height: 220px;
+    width: 220px;
+    margin: 10px 5px 10px 60px;
+    position: relative; /* Added for positioning */
+  }
+  
+  .rotate {
+    width: 220px;
+    height: 220px;
+    margin-left: 50px;
+    border-radius: 50%;
+    border: 6px solid;
+    border-color: red blue #635325 rgb(104,241,62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateAnimation 18s linear infinite; 
+  }
+  
+  @keyframes rotateAnimation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .album {
+    border-radius: 50%;
+    height: 205px;
+    width: 205px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .album:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(14, 192, 37, 0.5);
+  }
+  
+  .song_details {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  #song-name {
+    background: linear-gradient(to right, #08df13, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 30px 0px 30px;
+  }
+  
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  #current-time, #total-time {
+    width: 50px;
+    text-align: center;
+  }
+  
+  .progress-container {
+    width: 96%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #4CAF50;
+    width: 0%; 
+    transition: width 0.1s; 
+  }
+  
+  .vrk-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: transparent;
+    border-radius: 25px;
+  }
+  
+  .vrk-card {
+    width: 350px;
+    height: 200px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: all 2.5s ease;
+  }
+  
+  .vrk-card h2 {
+    color: #0ff;
+    font-size: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .vrk-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0deg, transparent, transparent 30%, rgba(0,255,255,0.3));
+    transform: rotate(-45deg);
+    transition: all 2.5s ease;
+    opacity: 0;
+  }
+  
+  .vrk-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  }
+  
+  .vrk-card:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
+  
+  .music-player {
+    text-align: center;
+  }
+  
+  #canvas {
+    width: 500px;
+    height: 200px;
+    background: transparent;
+    border-radius: 20px;
+  }
